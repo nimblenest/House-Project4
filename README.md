@@ -35,4 +35,11 @@ These results demonstrate a strong performance, with the model accurately captur
 ## Part 2: Model Use and Customer Interface
 
 
+## Written Analysis:
+
+Our data set provides a comprehensive overview of residential property listings. Descriptive statistics reveal a diverse range of property characteristics: the mean selling price stands at approximately $320,263, with notable variability indicated by a standard deviation of around $108,650. Property sizes vary widely, with an average living area of 2029 square feet and an average lot size of 25,348 square feet. The dataset spans houses built across different years, resulting in an average house age of approximately 25 years. Properties typically offer around 3 bedrooms and 2.5 baths, with amenities like basements, garages, and waterfront access also considered.
+
+Examining the frequency of property listings across counties, Wake County emerges with the highest frequency, followed by Johnston and Durham. Conversely, some counties show limited property listings, suggesting potential regional market variations or differing property availability. Visual analyses further highlight key insights: the selling price histogram exhibits a right-skewed distribution, indicating a majority of properties with lower prices and a few outliers with significantly higher prices. Correlation matrices and pair plots demonstrate meaningful relationships between numerical features and selling prices. For instance, larger living areas, more bedrooms, and additional baths correlate positively with higher selling prices.
+
+Delving into specific property features, box plots showcase the influence of features like garages and waterfront access on selling prices, with properties possessing these features generally commanding higher prices. However, the presence of basements does not exhibit a clear impact on selling price variations. Finally, histograms offer a visual narrative of the distribution of various features such as living area, lot size, and house age, providing additional context to the dataset's composition. Overall, the analysis underscores the significance of property attributes and regional factors in shaping residential property prices within the dataset.
 
