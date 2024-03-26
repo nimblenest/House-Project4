@@ -11,7 +11,7 @@ This project aims to predict the selling prices of houses using a dataset that i
 - **Cleaning Process:** The dataset underwent thorough cleaning, including handling missing values and removing outliers based on Z-scores and IQR to ensure data quality.
 
 ### Feature Engineering
-- **Features Used:** Features like living area sqft, lot sqft, number of rooms, total baths, and binary features for amenities such as basements, garages, and waterfront access were utilized. County data was transformed into dummy variables to capture the location's effect on price.
+- **Features Used:** Features like living area sqft, lot sqft, number of rooms, total baths, and binary features for amenities such as basements and garages, were utilized. County data was transformed into dummy variables to capture the location's effect on price.
 - **Rationale:** These features were chosen based on their expected influence on house prices, informed by real estate market knowledge and preliminary data analysis.
 
 ### Model Development and Evaluation
