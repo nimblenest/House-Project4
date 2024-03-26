@@ -3,15 +3,12 @@
 ## Overview
 This project aims to predict the selling prices of houses using a dataset that includes various features such as living area size, lot size, number of rooms, age of the house, and other relevant characteristics. By leveraging machine learning models, specifically Random Forest Regressor, we seek to provide accurate price estimates that could be valuable for both sellers and buyers in the real estate market.
 
-## Part 1: Data Handling, EDA, and Model Development
+## Part 1: Data Handling and Model Development
 
 ### Data Collection and Cleaning
 - **Dataset Overview:** The dataset is sourced from the Multiple Listing Service (MLS) covering house sales in and around Raleigh, NC. It represents a comprehensive compilation of house sales data, covering a wide range of properties with diverse characteristics, which provides a robust foundation for analyzing and predicting house selling prices.
   
 - **Cleaning Process:** The dataset underwent thorough cleaning, including handling missing values and removing outliers based on Z-scores and IQR to ensure data quality.
-
-### Exploratory Data Analysis (EDA)
-- **Key Findings:** 
 
 ### Feature Engineering
 - **Features Used:** Features like living area sqft, lot sqft, number of rooms, total baths, and binary features for amenities such as basements, garages, and waterfront access were utilized. County data was transformed into dummy variables to capture the location's effect on price.
