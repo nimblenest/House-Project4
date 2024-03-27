@@ -49,6 +49,7 @@ The provided Jupyter notebook (`house-sales-analysis-ML.ipynb`) contains detaile
 - **Random Forest Regressor:** Selected for its ability to handle non-linear relationships and interactions between features.
 - **Cross-Validation:** Used to ensure the model's performance is robust and generalizable across different data samples.
 - **Model Export:** The final model is saved as a `.joblib` file for integration with the Flask application.
+- **Model Download:** https://1drv.ms/f/s!AjRAg4mNHj8RgijFeSOIHquV1M7c?e=5CfPQ5
 
 ## Running the Web Application
 
