@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Real Estate</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="static/css/reset.css" type="text/css" media="all">
+<link rel="stylesheet" href="static/css/layout.css" type="text/css" media="all">
+<link rel="stylesheet" href="static/css/style.css" type="text/css" media="all">
+<script src="static/js/jquery-1.6.js"></script>
+<script src="static/js/cufon-yui.js"></script>
+<script src="static/js/cufon-replace.js"></script>
+<script src="static/js/Didact_Gothic_400.font.js"></script>
+<script src="static/js/jquery.nivo.slider.pack.js"></script>
+<script src="static/js/atooltip.jquery.js"></script>
+<script src="static/js/jquery.jqtransform.js"></script>
+<script src="static/js/script.js"></script>
+<script src="static/js/jquery.easing.1.3.js"></script>
+<!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<style type="text/css">.bg{behavior:url("js/PIE.htc");}</style>
+<![endif]-->
+</head>
+<body id="page1">
+<div class="body1">
+  <div class="main">
+    <!-- header -->
+    <header>
+      <h1><a href="index.html" id="logo"></a></h1>
+    </header>
+    <!-- / header -->
+  </div>
+</div>
+<!-- content -->
+<div class="body2">
+  <div class="main">
+    <section id="content">
+      <div class="wrapper">
+        <article class="col1">
+          <div id="slider"> 
+            <img src="static/images/img1.jpg" alt="" title=""> 
+            <img src="static/images/img2.jpg" alt="" title=""> 
+            <img src="static/images/img3.jpg" alt="" title=""> 
+            <img src="static/images/img4.jpg" alt="" title=""> 
+            <img src="static/images/img5.jpg" alt="" title=""> 
+          </div>
+        </article>
+        <article class="col2">
+<form id="form_1" action="/predict" method="post">
+  <div class="pad1">
+    <h3>Get Your Property Value</h3>
+    <div class="row_select"> County:<br>
+      <select id="countyInput" name="countyInput">
+        {% for county in counties %}
+          <option value="{{ county }}">{{ county }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <!--<div class="row_select"> City:<br>
+      <select id="cityInput" name="cityInput">
+        {% for city in cities %}
+          <option value="{{ city }}">{{ city }}</option>
+        {% endfor %}
+      </select>
+    </div>-->
+    <div class="row_select"> Lot Sqft:<br>
+      <input type="number" id="squareFootageInput" name="squareFootageInput" placeholder="Enter square footage">
+    </div>
+    <div class="row_select"> Living Sqft:<br>
+      <input type="number" id="livingsquareftInput" name="livingsquareftInput" placeholder="Enter square footage">
+    </div>    
+    <div class="row_select">
+      <div class="cols"> Basement:<br>
+        <select id="basementSelect" name="basementSelect">
+          {% for basement in basements %}
+            <option value="{{ basement }}">{{ basement }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="cols pad_left1"> Garage:<br>
+        <select id="garageSelect" name="garageSelect">
+          {% for garage in garages %}
+            <option value="{{ garage }}">{{ garage }}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </div>
+    <div class="row_select">
+      <div class="cols"> Bedroom(s):<br>
+        <select id="bedroomSelect" name="bedroomSelect">
+          {% for bedroom in bedrooms %}
+            <option value="{{ bedroom }}">{{ bedroom }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="cols pad_left1"> Bathroom(s):<br>
+        <select id="bathroomSelect" name="bathroomSelect">
+          {% for bathroom in bathrooms %}
+            <option value="{{ bathroom }}">{{ bathroom }}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </div>
+    <!--<div class="row_select">
+      <div class="cols"> Waterfront:<br>
+        <select id="waterfrontSelect" name="waterfrontSelect">
+          {% for waterfront in waterfronts %}
+            <option value="{{ waterfront }}">{{ waterfront }}</option>
+          {% endfor %}
+        </select>
+      </div>-->
+        <div class="row_select">
+      <div class="cols"> # of Rooms:<br>
+        <select id="roomSelect" name="roomSelect">
+          {% for room in rooms %}
+            <option value="{{ room }}">{{ room }}</option>
+          {% endfor %}
+        </select>
+      </div>
+    <div class="cols pad_left1"> House:<br>
+        <select id="builtSelect" name="builtSelect">
+          {% for built in builts %}
+            <option value="{{ built }}">{{ built }}</option>
+          {% endfor %}
+        </select>
+    </div>        
+      <div class="cols pad_left1">
+        <!-- Changed to button type submit to trigger form submission -->
+        <button type="submit" class="button">Proposals</button>
+         </div>
+       </div>
+     </div>
+   </form>
+    </article>
+      </div>
+    </section>
+  </div>
+</div>
+<!-- / content -->
+<script>Cufon.now();</script>
+<script>
+$(window).load(function () {
+    $('#slider').nivoSlider({
+        effect: 'sliceUpDown', //Specify sets like: 'fold,fade,sliceDown, sliceDownLeft, sliceUp, sliceUpLeft, sliceUpDown, sliceUpDownLeft'
+        slices: 50,
+        animSpeed: 500,
+        pauseTime: 4000,
+        startSlide: 0, //Set starting Slide (0 index)
+        directionNav: false, //Next & Prev
+        directionNavHide: false, //Only show on hover
+        controlNav: true, //1,2,3...
+        controlNavThumbs: false, //Use thumbnails for Control Nav
+        controlNavThumbsFromRel: false, //Use image rel for thumbs
+        controlNavThumbsSearch: '.jpg', //Replace this with...
+        controlNavThumbsReplace: '_thumb.jpg', //...this in thumb Image src
+        keyboardNav: true, //Use left & right arrows
+        pauseOnHover: true, //Stop animation while hovering
+        manualAdvance: false, //Force manual transitions
+        captionOpacity: 1, //Universal caption opacity
+        beforeChange: function () {
+            $('.nivo-caption').animate({
+                bottom: '-110'
+            }, 400, 'easeInBack')
+        },
+        afterChange: function () {
+            Cufon.refresh();
+            $('.nivo-caption').animate({
+                bottom: '-20'
+            }, 400, 'easeOutBack')
+        },
+        slideshowEnd: function () {} //Triggers after all slides have been shown
+    });
+    Cufon.refresh();
+});
+
+document.getElementById('squareFootageInput').addEventListener('input', function() {
+    var inputValue = parseInt(this.value);
+    if (isNaN(inputValue) || inputValue <= 0) {
+        alert('Please enter a valid positive number for square footage.');
+        this.value = ''; // Clear the input field
+    }
+});
+
+document.getElementById('livingsquareftInput').addEventListener('input', function() {
+    var inputValue = parseInt(this.value);
+    if (isNaN(inputValue) || inputValue <= 0) {
+        alert('Please enter a valid positive number for square footage.');
+        this.value = ''; // Clear the input field
+    }
+});
+
+</script>
+</body>
+</html>
