@@ -13,7 +13,7 @@ cwd = os.getcwd()
 print("Current working directory:", cwd)
 
 # Load the ML model using a relative path
-model_path = os.path.join(cwd, 'Webapp', 'random_forest_model.joblib')
+model_path = os.path.join(cwd, 'Webapp', 'static', 'random_forest_model.joblib')
 try:
     model = joblib.load(model_path)
     print("Model loaded successfully.")
@@ -199,7 +199,7 @@ def get_builts():
     try:
         conn = psycopg2.connect("dbname='Real_Estate' user='postgres' host='192.168.50.231' password='D0ntD01t!'")
         cur = conn.cursor()
-        query = "SELECT DISTINCT age_of_house FROM real_estate"
+        query = "SELECT DISTINCT age_of_house FROM real_estate ORDER BY age_of_house"
         print("Executing query:", query)  # Debug: print the SQL query
         cur.execute(query)
         builts = [row[0] for row in cur.fetchall()]
@@ -215,7 +215,7 @@ def get_rooms():
     try:
         conn = psycopg2.connect("dbname='Real_Estate' user='postgres' host='192.168.50.231' password='D0ntD01t!'")
         cur = conn.cursor()
-        query = "SELECT DISTINCT number_of_rooms FROM real_estate"
+        query = "SELECT DISTINCT number_of_rooms FROM real_estate ORDER BY number_of_rooms"
         print("Executing query:", query)  # Debug: print the SQL query
         cur.execute(query)
         rooms = [row[0] for row in cur.fetchall()]
