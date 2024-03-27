@@ -44,7 +44,7 @@ The provided Jupyter notebook (`house-sales-analysis-ML.ipynb`) contains detaile
 
 ### Feature Engineering
 - Features Used: Features like living area sqft, lot sqft, number of rooms, total baths, and binary features for amenities such as basements and garages, were utilized. County data was transformed into dummy variables to capture the location's effect on price.
-- Rationale: These features were chosen based on their expected influence on house prices, informed by real estate market knowledge and preliminary data analysis.
+- Utilized VIF testing to ensure against multicollinearity among features.
 
 ### Model Training and Evaluation
 - **Random Forest Regressor:**  The Random Forest Regressor was chosen for its robustness and ability to handle the complex non-linear relationships inherent in real estate data. Configured with 100 trees and a random state of 42 to ensure reproducibility, this model is well-suited for our prediction tasks. The initial evaluation of the Random Forest Model yielded a RMSE of 1,240.42 and a R² of .9999.
